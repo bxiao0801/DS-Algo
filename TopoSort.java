@@ -19,7 +19,6 @@ public class Solution{
 			graph.get(e[0]).add(e[1]);
 			indegree[e[1]]++;
 		}
-		
 		//those with indegree 0 enqueue
 		for(int i=0;i<indegree.length;i++){
 			if(indegree[i]==0){
@@ -27,8 +26,7 @@ public class Solution{
 			}
 		}
     
-    
-		while(!q.isEmpty()){
+    		while(!q.isEmpty()){
 			Integer i=q.poll();
 			res.add(i);
 			List<Integer> tmp=graph.get(i);
